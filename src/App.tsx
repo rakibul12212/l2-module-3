@@ -6,6 +6,7 @@ import { MenuItem, MenuList } from "./components/menu";
 import GameResults from "./pages/hooksPages/GameResults";
 import Profile from "./pages/hooksPages/Profile";
 import UsersContainer from "./components/UsersContainer";
+import Select from "./components/Select";
 
 function App() {
   const { dark, setDark } = useContext(ThemeContext) as TThemeContext;
@@ -29,7 +30,13 @@ function App() {
 
       {/* <Profile></Profile> */}
       {/* <GameResults></GameResults> */}
-      <UsersContainer />
+      {/* <UsersContainer /> */}
+      <Select>
+        <Select.SelectOption value="Option1">Option 1</Select.SelectOption>
+        <Select.SelectOption value="Option2">Option 2</Select.SelectOption>
+        <Select.SelectOption value="Option3">Option 3</Select.SelectOption>
+        <Select.SelectOption value="Option4">Option 4</Select.SelectOption>
+      </Select>
     </div>
   );
 }
